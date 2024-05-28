@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check version
+        run: |
+          clang-tidy --version
